@@ -1,0 +1,42 @@
+{
+  "name": "hapi-typescript-mongo-restapi",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "nodemon -e ts --exec \"npm run buildrun\" ",
+    "build": "tsc",
+    "buildrun": "npm run build && node ./dist/index.js",
+    "test_lab": "lab -vclS -T node_modules/lab-transform-typescript ./src/tests/index.test.ts",
+    "test_mocha": "mocha -r ts-node/register src/tests/**/*.spec.ts"
+  },
+  "keywords": [],
+  "author": "Maxim",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "mongoose": "^5.10.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.2",
+    "@hapi/lab": "^23.0.0",
+    "@types/chai": "^4.2.12",
+    "@types/expect": "^24.3.0",
+    "@types/hapi__hapi": "^19.0.2",
+    "@types/mocha": "^8.0.3",
+    "@types/mongoose": "^5.7.7",
+    "@types/node": "^13.9.2",
+    "@types/validator": "^13.1.0",
+    "chai": "^4.2.0",
+    "chai-datetime": "^1.7.0",
+    "chai-http": "^4.3.0",
+    "lab-transform-typescript": "^3.0.1",
+    "mocha": "^8.1.1",
+    "nodemon": "^2.0.2",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3"
+  }
+}
